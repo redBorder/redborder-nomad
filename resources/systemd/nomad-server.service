@@ -1,0 +1,9 @@
+[Unit]
+Description=Nomad server
+
+[Service]
+User=root
+ExecStart=/usr/bin/nomad agent -config /etc/nomad/server.hcl
+
+[Install]
+WantedBy=multi-user.target
